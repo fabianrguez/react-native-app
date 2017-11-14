@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/node_modules/react-native/Libraries/Text/RCTShadowRawText.m \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManager.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/fabianrodriguezgamez/Repositorios/EsmeMapp/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h
