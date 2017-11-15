@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import CircleButton from '../ui/CircleButton';
-import CameraHelper from '../../helpers/CameraHelper';
 
 export default class Home extends Component {
 

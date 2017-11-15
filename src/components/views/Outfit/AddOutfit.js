@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Picker, Text, TouchableOpacity, Image} from 'react-native';
-import CameraHelper from '../../../helpers/CameraHelper';
+import {Image, StyleSheet, View} from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
 import {Button} from '../../ui/Button';
 

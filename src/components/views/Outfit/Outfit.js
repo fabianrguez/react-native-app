@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Button} from '../../ui/Button';
 
 export default class Outfit extends Component {

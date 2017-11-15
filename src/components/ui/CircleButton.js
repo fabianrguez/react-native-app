@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, TouchableOpacity, StyleSheet, View, Image} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 export default class CircleButton extends Component {
