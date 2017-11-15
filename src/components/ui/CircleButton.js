@@ -25,7 +25,7 @@ export default class CircleButton extends Component {
               source={this.props.icon}
             />
           </TouchableOpacity>
-          <Text style={styles.text}>Outfit</Text>
+          <Text style={styles.text}>{this.props.buttonText}</Text>
         </LinearGradient>
     );
   }
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     textAlign: 'center',
     fontWeight: '600',
-    color: '#cccccc'
+    color: '#000'
   },
   icon: {
     height: 80
