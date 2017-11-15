@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Button} from '../../ui/Button';
 
 export default class Outfit extends Component {
 
@@ -19,12 +20,10 @@ export default class Outfit extends Component {
       <View
         style={styles.container}
       >
-        <TouchableOpacity
+        <Button
           onPress={this.onAddPrenda}
-          style={styles.button}
-        >
-          <Text>Añadir prenda</Text>
-        </TouchableOpacity>
+          label={'Añadir prenda'}
+        />
       </View>
     );
   }

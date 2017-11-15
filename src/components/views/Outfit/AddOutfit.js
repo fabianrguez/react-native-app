@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, StyleSheet, Picker, Text, TouchableOpacity, Image} from 'react-native';
 import CameraHelper from '../../../helpers/CameraHelper';
 import * as ImagePicker from 'react-native-image-picker';
+import {Button} from '../../ui/Button';
 
 export default class AddOutfit extends Component {
 
@@ -44,13 +45,10 @@ export default class AddOutfit extends Component {
       <View
         style={styles.container}
       >
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            onPress={() => this.openCamera()}
-            style={styles.button}>
-            <Text>Subir foto</Text>
-          </TouchableOpacity>
-        </View>
+        <Button
+          onPress={this.openCamera.bind(this)}
+          label={'Subir foto'}
+        />
         <View style={{alignItems: 'center', paddingTop: 10}}>
           {this.state.imagePath ?
             <Image
@@ -67,16 +65,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 30,
-  },
-  buttonContainer: {
     alignItems: 'center'
-  },
-  button: {
-    borderWidth: 3,
-    borderColor: '#ccc',
-    paddingVertical: 15,
-    paddingHorizontal: 100,
-    borderRadius: 30
   },
   image: {
     height: 400,
