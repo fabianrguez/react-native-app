@@ -12,7 +12,8 @@ export const Button = (props) => {
       style={styles.buttonContainer}>
       <TouchableOpacity
         onPress={() => props.onPress()}
-        style={styles.button}>
+        style={styles.button}
+        disabled={props.disabled | false}>
         <Text
           style={styles.text}>
           {props.label}
