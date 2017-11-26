@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
 import {Button} from '../../ui/Button';
-import { RadioButtons } from 'react-native-radio-buttons'
+import {RadioButtons} from 'react-native-radio-buttons'
+
 
 export default class AddOutfit extends Component {
 
@@ -19,7 +20,7 @@ export default class AddOutfit extends Component {
 
   openCamera() {
     const options = {
-      title: 'Selecciona algo',
+      title: 'Selecciona una imagen',
       storageOptions: {
         skipBackup: true,
         path: 'images'
@@ -38,6 +39,8 @@ export default class AddOutfit extends Component {
           imageWidth: response.width,
           imageHeight: response.height
         });
+        const {navigate} = this.props.navigation;
+        navigate('ImagePreview', {image: this.state.imagePath, type: this.state.selectedOption});
       }
     }));
   }
@@ -59,7 +62,7 @@ export default class AddOutfit extends Component {
     ];
 
     function renderOption(option, selected, onSelect, index){
-      const style = selected ? { fontWeight: 'bold', fontSize: 17} : {fontSize: 15};
+      const style = selected ? { fontWeight: 'bold', fontSize: 15} : {fontSize: 15};
       const buttonStyle = {
         borderRadius: 30,
         borderWidth: 1,
@@ -99,13 +102,6 @@ export default class AddOutfit extends Component {
           label={'Subir foto'}
           disabled={this.state.uploadButtonDisabled}
         />
-        <View style={{alignItems: 'center', paddingTop: 10}}>
-          {this.state.imagePath ?
-            <Image
-              style={styles.image}
-              source={{uri: this.state.imagePath}}/> : null}
-        </View>
-
       </View>
     );
   }
@@ -116,10 +112,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 30,
     alignItems: 'center'
-  },
-  image: {
-    height: 275,
-    width: 400
   },
   text: {
     fontWeight: 'bold',

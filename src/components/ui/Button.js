@@ -26,13 +26,15 @@ export const Button = (props) => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    borderRadius: 30
+    borderRadius: 30,
+    margin: 5,
+    alignItems: 'center'
   },
   button: {
     borderWidth: 3,
     borderColor: 'transparent',
     paddingVertical: 15,
-    paddingHorizontal: 100,
+    width: 300,
     borderRadius: 30
   },
   text: {

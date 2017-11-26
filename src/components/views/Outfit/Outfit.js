@@ -8,11 +8,17 @@ export default class Outfit extends Component {
     super(props);
 
     this.onAddPrenda = this.onAddPrenda.bind(this);
+    this.onCreateOutfit = this.onCreateOutfit.bind(this);
   }
 
   onAddPrenda() {
     const { navigate } = this.props.navigation;
     navigate('AddOutfit');
+  }
+
+  onCreateOutfit() {
+    const { navigate } = this.props.navigation;
+    navigate('CreateOutfit');
   }
 
   render() {
@@ -24,6 +30,14 @@ export default class Outfit extends Component {
           onPress={this.onAddPrenda}
           label={'Añadir prenda'}
         />
+        <Button
+          onPress={() => {}}
+          label={'Ver Outfits'}
+        />
+        <Button
+          onPress={this.onCreateOutfit}
+          label={'Crear Outfits'}
+        />
       </View>
     );
   }
@@ -32,16 +46,9 @@ export default class Outfit extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30,
+    paddingTop: 30,
     justifyContent: 'flex-start',
     alignItems: 'center'
-  },
-  button: {
-    borderWidth: 3,
-    borderColor: '#ccc',
-    paddingHorizontal: 100,
-    paddingVertical: 15,
-    borderRadius: 20
   }
 
 });

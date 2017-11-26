@@ -3,7 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
+	<array>
 	<string>en</string>
+	<string>es</string>
+	</array>
 	<key>CFBundleDisplayName</key>
 	<string>EsmeMapp</string>
 	<key>CFBundleExecutable</key>
