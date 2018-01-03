@@ -1,27 +1,30 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Image} from 'react-native';
-import Carousel from 'react-native-snap-carousel/src/carousel/Carousel';
+import {View, StyleSheet, Image, ScrollView} from 'react-native';
+import Carousel from 'react-native-snap-carousel';
+import {firebase} from '../../../config/firebaseConfig';
+import * as _ from 'lodash';
 
 export default class CreateOutfit extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      data: [
-        'https://firebasestorage.googleapis.com/v0/b/esmemapp.appspot.com/o/image%2F1511698107083.jpg?alt=media&token=c7cd956d-3574-4de7-ac40-86a640bc1e1f',
-        'https://firebasestorage.googleapis.com/v0/b/esmemapp.appspot.com/o/image%2F1511698128511.jpg?alt=media&token=e53a0af7-cb5c-4b2c-8078-996172a6b3d0',
-        'https://firebasestorage.googleapis.com/v0/b/esmemapp.appspot.com/o/image%2F1511698107083.jpg?alt=media&token=c7cd956d-3574-4de7-ac40-86a640bc1e1f'
-      ]
+      gorros: []
     }
   }
 
+  componentWillMount() {
+    firebase.database().ref().child('Gorro').on('value', (data) => {
+      this.setState({gorros: _.values(data.val())})
+    });
+  }
+
   _renderItem({item, index}) {
-    console.log(item);
     return(
       <View>
         <Image
           source={{uri: item}}
-          style={{width: 300, height: 200}}
+          style={{width: 300, height: 200, borderRadius: 10}}
         />
       </View>
     )
@@ -29,18 +32,18 @@ export default class CreateOutfit extends Component {
 
   render() {
     return(
-      <View style={styles.container}>
-        <Carousel
-          data={this.state.data}
-          renderItem={this._renderItem}
-          sliderWidth={400}
-          itemWidth={300}
-          autoplay={true}
-          lockScrollWhileSnapping={true}
-          enableMomentum={false}
-          apparitionDelay={0}
-        />
-      </View>
+      <ScrollView style={styles.container}>
+        <View>
+          <Carousel
+            data={this.state.gorros}
+            renderItem={this._renderItem}
+            sliderWidth={400}
+            itemWidth={300}
+            apparitionDelay={0}
+            onSnapToItem={(index) => {console.log(index)}}
+          />
+        </View>
+      </ScrollView>
     )
   }
 
@@ -49,6 +52,6 @@ export default class CreateOutfit extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30
+    paddingTop: 30,
   }
 });

@@ -5,6 +5,7 @@ import RNFetchBlob from 'react-native-fetch-blob';
 import {firebase} from '../../../config/firebaseConfig';
 import ImageHelper from '../../../helpers/ImageHelper';
 import ImageResizer from 'react-native-image-resizer';
+import {NavigationActions} from 'react-navigation';
 
 const Blob = RNFetchBlob.polyfill.Blob;
 const fs = RNFetchBlob.fs;
@@ -49,7 +50,7 @@ export default class ImagePreview extends Component {
       uploading: false
     };
 
-    ImageResizer.createResizedImage(this.state.path, 400, 275, 'JPEG', 50)
+    ImageResizer.createResizedImage(this.state.path, 400, 275, 'JPEG', 75)
       .then(({uri}) => {
         this.setState({path: uri});
     }).catch((err) => {
@@ -73,8 +74,14 @@ export default class ImagePreview extends Component {
       .then(response => {
         ImageHelper.setImageUrl(new Date().getTime(), this.state.type ,response);
         this.setState({uploading: false});
-        const {navigate} = this.props.navigation;
-        navigate('Outfit');
+        const resetActions = NavigationActions.reset({
+          index: 1,
+          actions: [
+            NavigationActions.navigate({routeName: 'Home'}),
+            NavigationActions.navigate({routeName: 'Outfit'})
+          ]
+        });
+        this.props.navigation.dispatch(resetActions);
       })
       .done()
   }
